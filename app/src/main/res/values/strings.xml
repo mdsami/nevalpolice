@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">BNP App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="no_nearby_thana">NearBy Thana , Fari Not found</string>
+    <string name="oc_name">Mr Lutfor Rahman</string>
+    <string name="thana_fari_name">Sodorghat</string>
+    <string name="post">Officer in charge</string>
+    <string name="phone">01769692523</string>
+
+    <string-array name="district">
+        <item></item>
+        <item>Dhaka</item>
+        <item>Rangpur</item>
+        <item>Panchagersh</item>
+        <item>Dinajpur</item>
+    </string-array>
+
+    <string-array name="thana">
+        <item></item>
+        <item>Dhaka</item>
+        <item>Rangpur</item>
+        <item>Panchagersh</item>
+        <item>Dinajpur</item>
+    </string-array>
+
+    <string-array name="crime">
+        <item></item>
+        <item>Casual Leave</item>
+        <item>Comp off</item>
+        <item>Earned Leave</item>
+        <item>Sick Leave</item>
+    </string-array>
+
+</resources>

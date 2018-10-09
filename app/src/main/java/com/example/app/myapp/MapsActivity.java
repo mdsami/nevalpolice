@@ -43,7 +43,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LatLng location;
     private double lat1;
     private double long1;
-    private String mJSONURLString = "http://34.229.163.255/~bnpdb/thanafari.json";
+    private String mJSONURLString = "http://etutorsfinder.com/thanafari.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +106,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                         .snippet("Thana / Fari name: " + name)
                                         .icon(BitmapDescriptorFactory
                                                 .fromResource(R.drawable.pin)));
+
+                                mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                                    @Override
+                                    public void onInfoWindowClick(Marker marker) {
+                                        Intent intent = new Intent(MapsActivity.this, ComplainActivity.class);
+                                        startActivity(intent);
+                                    }
+                                });
                             }
 
                             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));

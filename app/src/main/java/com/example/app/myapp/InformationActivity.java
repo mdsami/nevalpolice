@@ -33,7 +33,7 @@ public class InformationActivity extends AppCompatActivity {
 
 //    private static final String JSON_URL = "http://34.229.163.255/~bnpdb/thanafari.json";
 
-    private static final String JSON_URL = "http://hostbrine.net/thanafari.json";
+    private static final String JSON_URL = "http://etutorsfinder.com/thanafari.json";
     private List<Information> informationList;
     private ThanaFariRecyclerAdapter thanaFariRecyclerAdapter;
     private RecyclerView recyclerViewInfo;

@@ -55,6 +55,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+
         mapFragment.getMapAsync(this);
 
 
@@ -157,18 +158,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-//        googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-//            @Override
-//            public boolean onMarkerClick(Marker marker) {
-//                Intent conplainIntent = new Intent(mContext,ComplainActivity.class);
-//                mContext.startActivity(conplainIntent);
-//            }
-//        });
+
 
 
         // Add a marker in Office of DIG River Police and move the camera
         LatLng dhaka = new LatLng(23.7942978, 90.3528592);
         mMap.addMarker(new MarkerOptions().position(dhaka).title("ডিআইজি নদী পুলিশ অফিস"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(dhaka,10.2f));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(dhaka,4.2f));
+
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(dhaka));
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(16));
+
     }
 }

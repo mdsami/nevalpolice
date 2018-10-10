@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
         complainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "complain Button", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "complain Button", Toast.LENGTH_SHORT).show();
                 Intent splashIntent = new Intent(MainActivity.this, ComplainActivity.class);
                 startActivity(splashIntent);
             }
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity
         informationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "complain Button", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "info Button", Toast.LENGTH_SHORT).show();
                 Intent splashIntent = new Intent(MainActivity.this, InformationActivity.class);
                 startActivity(splashIntent);
             }

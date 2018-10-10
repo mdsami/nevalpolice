@@ -28,6 +28,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -90,114 +91,32 @@ public class ComplainActivity extends AppCompatActivity  {
 
 
     SpinnerValue[] spArr1 = new SpinnerValue[]{
-            new SpinnerValue("সদরঘাট নৌ থানা  ", "1"),
+            new SpinnerValue("দুর্বৃত্তদের হামলা  ", "1"),
             new SpinnerValue("মাঝারী ", "2"),
             new SpinnerValue("নিন্মমানের ","3"),
     };
     SpinnerValue[] spArr2 = new SpinnerValue[]{
 
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-
-            new SpinnerValue("সদরঘাট নৌ থানা ", "58"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "59"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "60"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "61"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "62"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "63"),
-            new SpinnerValue("সদরঘাট নৌ থানা ", "64"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "55"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "66"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "66"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "67"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "68"),
-
-            new SpinnerValue("সদরঘাট নৌ থানা ", "69"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "70"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "71"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "72"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "73"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "74"),
-            new SpinnerValue("সদরঘাট নৌ থানা ", "75"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "76"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "77"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "78"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "79"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "80"),
 
             new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-
-
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-
-
-
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-
-
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-
-
+            new SpinnerValue("নারায়ণগঞ্জ সদর নৌ থানা", "59"),
+            new SpinnerValue("কলাগছিয়া নৌ থানা", "60"),
+            new SpinnerValue("পাটুরিয়া নৌ থানা", "87"),
+            new SpinnerValue("ডবাহাদুরবাদ নৌ থানা", "93"),
+            new SpinnerValue("বরিশাল সদর নৌ থানা", "103"),
+            new SpinnerValue("পূর্ব ইলিশা নৌ থানা ", "104"),
+            new SpinnerValue("হকেএমপি নৌ থানা খুলনা", "116"),
+            new SpinnerValue("নলিয়ান নৌ থানা", "117"),
+            new SpinnerValue("চাঁদপাই নৌ থানা", "118"),
+            new SpinnerValue("বুড়ি গোয়ালিনী নৌ থানা", "119"),
+            new SpinnerValue("চাঁঁদপুর সদর নৌ থানা", "135"),
     };
 
     SpinnerValue[] spArr3 = new SpinnerValue[]{
 
-            new SpinnerValue("সদরঘাট নৌ ফাঁড়ি ", "1"),
+            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়ি ", "1"),
             new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "2")
+
 
     };
 
@@ -239,6 +158,9 @@ public class ComplainActivity extends AppCompatActivity  {
 
         etmgs = (EditText) findViewById(R.id.etmgs);
         etphone = (EditText) findViewById(R.id.etphone);
+
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
 
 
 

@@ -4,21 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/page_banner"
     tools:context="com.example.app.myapp.HelpActivity">
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="367dp"
-        android:layout_height="135dp"
-        android:text="To provide safety and securityin all inland waterways and ensure the maximum environmental standards on these routes."
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="216dp" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="150dp"
+        android:layout_height="356dp"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.786"
         app:srcCompat="@drawable/bnp_logo"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="79dp" />
+        tools:ignore="MissingConstraints"
+        tools:srcCompat="@drawable/bnp_logo" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="389dp"
+        android:layout_height="169dp"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="372dp">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="338dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="   নৌ পথে অপরাধ নিয়ন্ত্রণ ও নৌ পথ ব্যবহারকারীদের মধ্যে নিরাপত্তাবোধ তৈরি এবং     দুর্ঘটনা কমিয়ে আনার মধ্য দিয়ে ৪ বছর পার করলো নৌপুলিশ। "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.493"
+            tools:layout_editor_absoluteX="16dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>
+

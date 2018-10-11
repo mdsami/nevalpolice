@@ -91,13 +91,14 @@ public class ComplainActivity extends AppCompatActivity  {
 
 
     SpinnerValue[] spArr1 = new SpinnerValue[]{
+            new SpinnerValue("Select Type of crime  ", "0"),
             new SpinnerValue("দুর্বৃত্তদের হামলা  ", "1"),
             new SpinnerValue("মাঝারী ", "2"),
             new SpinnerValue("নিন্মমানের ","3"),
     };
     SpinnerValue[] spArr2 = new SpinnerValue[]{
 
-
+            new SpinnerValue("Select Thana  ", "0"),
             new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
             new SpinnerValue("নারায়ণগঞ্জ সদর নৌ থানা", "59"),
             new SpinnerValue("কলাগছিয়া নৌ থানা", "60"),
@@ -113,7 +114,7 @@ public class ComplainActivity extends AppCompatActivity  {
     };
 
     SpinnerValue[] spArr3 = new SpinnerValue[]{
-
+            new SpinnerValue("Select Fari  ", "0"),
             new SpinnerValue("হাসনাবাদ নৌ ফাঁড়ি ", "1"),
             new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "2")
 

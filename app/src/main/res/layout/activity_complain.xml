@@ -144,6 +144,7 @@
                                 android:ems="10"
                                 android:hint="Enter Your Phone Number"
                                 android:inputType="phone"
+                                android:maxLength="11"
                                 android:paddingLeft="8dp"
                                 android:textSize="16dp"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -166,34 +167,34 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent">
 
+                                <!--<LinearLayout-->
+                                    <!--android:layout_width="0dp"-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:layout_height="match_parent">-->
+
+                                    <!--<android.support.constraint.ConstraintLayout-->
+                                        <!--android:layout_width="match_parent"-->
+                                        <!--android:layout_height="match_parent">-->
+
+                                        <!--<TextView-->
+                                            <!--android:id="@+id/editText"-->
+                                            <!--android:layout_width="162dp"-->
+                                            <!--android:layout_height="33dp"-->
+                                            <!--android:background="@drawable/edit_text_bg"-->
+                                            <!--android:ems="10"-->
+                                            <!--android:hint="Type of Crime"-->
+                                            <!--android:inputType="textPersonName"-->
+                                            <!--android:paddingLeft="2dp"-->
+                                            <!--android:textSize="16sp"-->
+                                            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                                            <!--app:layout_constraintEnd_toEndOf="parent"-->
+                                            <!--app:layout_constraintStart_toStartOf="parent"-->
+                                            <!--app:layout_constraintTop_toTopOf="parent" />-->
+                                    <!--</android.support.constraint.ConstraintLayout>-->
+                                <!--</LinearLayout>-->
+
                                 <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_weight="1"
-                                    android:layout_height="match_parent">
-
-                                    <android.support.constraint.ConstraintLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
-
-                                        <TextView
-                                            android:id="@+id/editText"
-                                            android:layout_width="162dp"
-                                            android:layout_height="33dp"
-                                            android:background="@drawable/edit_text_bg"
-                                            android:ems="10"
-                                            android:hint="Type of Crime"
-                                            android:inputType="textPersonName"
-                                            android:paddingLeft="2dp"
-                                            android:textSize="16sp"
-                                            app:layout_constraintBottom_toBottomOf="parent"
-                                            app:layout_constraintEnd_toEndOf="parent"
-                                            app:layout_constraintStart_toStartOf="parent"
-                                            app:layout_constraintTop_toTopOf="parent" />
-                                    </android.support.constraint.ConstraintLayout>
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
+                                    android:layout_width="match_parent"
                                     android:layout_weight="1"
                                     android:layout_height="match_parent">
 
@@ -305,34 +306,34 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="1">-->
+
+                            <!--<android.support.constraint.ConstraintLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+
+                                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:id="@+id/editText4"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:layout_width="161dp"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:layout_height="37dp"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:background="@drawable/edit_text_bg"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:ems="10"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:hint="Select Thana"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:inputType="textPersonName"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:paddingLeft="2dp"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;android:textSize="16sp"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+                                    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+                            <!--</android.support.constraint.ConstraintLayout>-->
+                        <!--</LinearLayout>-->
+
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <android.support.constraint.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <TextView
-                                    android:id="@+id/editText4"
-                                    android:layout_width="161dp"
-                                    android:layout_height="37dp"
-                                    android:background="@drawable/edit_text_bg"
-                                    android:ems="10"
-                                    android:hint="Select Thana"
-                                    android:inputType="textPersonName"
-                                    android:paddingLeft="2dp"
-                                    android:textSize="16sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </android.support.constraint.ConstraintLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1">
 
@@ -368,34 +369,34 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/linearLayouts">
 
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="1">-->
+
+                            <!--<android.support.constraint.ConstraintLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+
+                                <!--<TextView-->
+                                    <!--android:id="@+id/editText5"-->
+                                    <!--android:layout_width="161dp"-->
+                                    <!--android:layout_height="32dp"-->
+                                    <!--android:background="@drawable/edit_text_bg"-->
+                                    <!--android:ems="10"-->
+                                    <!--android:hint="Select Fari"-->
+                                    <!--android:inputType="textPersonName"-->
+                                    <!--android:paddingLeft="2dp"-->
+                                    <!--android:textSize="16sp"-->
+                                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                                    <!--app:layout_constraintTop_toTopOf="parent" />-->
+                            <!--</android.support.constraint.ConstraintLayout>-->
+                        <!--</LinearLayout>-->
+
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <android.support.constraint.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <TextView
-                                    android:id="@+id/editText5"
-                                    android:layout_width="161dp"
-                                    android:layout_height="32dp"
-                                    android:background="@drawable/edit_text_bg"
-                                    android:ems="10"
-                                    android:hint="Select Fari"
-                                    android:inputType="textPersonName"
-                                    android:paddingLeft="2dp"
-                                    android:textSize="16sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </android.support.constraint.ConstraintLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1">
 

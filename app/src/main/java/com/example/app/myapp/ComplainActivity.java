@@ -87,6 +87,7 @@ import retrofit2.Callback;
 import retrofit2.http.Multipart;
 import retrofit2.http.Path;
 
+import com.example.app.myapp.model.Nearby;
 public class ComplainActivity extends AppCompatActivity  {
 
 
@@ -173,7 +174,13 @@ public class ComplainActivity extends AppCompatActivity  {
 
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
 
-
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String value = extras.getString("id");
+            //The key argument here must match that used in the other activity
+            //Toast.makeText(mContext, "id", Toast.LENGTH_SHORT).show();
+            Log.d("DATA_ID", value);
+        }
         //setup data
         idInitialClass = new IdInitialClass();
 

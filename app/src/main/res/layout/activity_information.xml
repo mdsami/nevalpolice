@@ -128,34 +128,34 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="1">-->
+
+                            <!--<android.support.constraint.ConstraintLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+
+                                <!--<EditText-->
+                                    <!--android:id="@+id/editText"-->
+                                    <!--android:layout_width="161dp"-->
+                                    <!--android:layout_height="37dp"-->
+                                    <!--android:background="@drawable/edit_text_bg"-->
+                                    <!--android:ems="10"-->
+                                    <!--android:hint="Select Thana"-->
+                                    <!--android:inputType="textPersonName"-->
+                                    <!--android:paddingLeft="2dp"-->
+                                    <!--android:textSize="16sp"-->
+                                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                                    <!--app:layout_constraintTop_toTopOf="parent" />-->
+                            <!--</android.support.constraint.ConstraintLayout>-->
+                        <!--</LinearLayout>-->
+
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <android.support.constraint.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <EditText
-                                    android:id="@+id/editText"
-                                    android:layout_width="161dp"
-                                    android:layout_height="37dp"
-                                    android:background="@drawable/edit_text_bg"
-                                    android:ems="10"
-                                    android:hint="Select Thana"
-                                    android:inputType="textPersonName"
-                                    android:paddingLeft="2dp"
-                                    android:textSize="16sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </android.support.constraint.ConstraintLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1">
 
@@ -192,34 +192,34 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="1">-->
+
+                            <!--<android.support.constraint.ConstraintLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent">-->
+
+                                <!--<EditText-->
+                                    <!--android:id="@+id/editText4"-->
+                                    <!--android:layout_width="161dp"-->
+                                    <!--android:layout_height="37dp"-->
+                                    <!--android:background="@drawable/edit_text_bg"-->
+                                    <!--android:ems="10"-->
+                                    <!--android:hint="Select Fari"-->
+                                    <!--android:inputType="textPersonName"-->
+                                    <!--android:paddingLeft="2dp"-->
+                                    <!--android:textSize="16sp"-->
+                                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                                    <!--app:layout_constraintTop_toTopOf="parent" />-->
+                            <!--</android.support.constraint.ConstraintLayout>-->
+                        <!--</LinearLayout>-->
+
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <android.support.constraint.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <EditText
-                                    android:id="@+id/editText4"
-                                    android:layout_width="161dp"
-                                    android:layout_height="37dp"
-                                    android:background="@drawable/edit_text_bg"
-                                    android:ems="10"
-                                    android:hint="Select Fari"
-                                    android:inputType="textPersonName"
-                                    android:paddingLeft="2dp"
-                                    android:textSize="16sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </android.support.constraint.ConstraintLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1">
 

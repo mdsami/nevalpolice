@@ -41,6 +41,7 @@ public class InformationActivity extends AppCompatActivity {
 
     SpinnerValue[] spArr1 = new SpinnerValue[]{
 
+            new SpinnerValue("Select Thana ", "0"),
             new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
             new SpinnerValue("নারায়ণগঞ্জ সদর নৌ থানা", "59"),
             new SpinnerValue("কলাগছিয়া নৌ থানা", "60"),
@@ -60,7 +61,7 @@ public class InformationActivity extends AppCompatActivity {
     };
 
     SpinnerValue[] spArr2 = new SpinnerValue[]{
-
+            new SpinnerValue("Select Fari ", "0"),
             new SpinnerValue("হাসনাবাদ নৌ ফাঁড়ি ", "1"),
             new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "2")
 
@@ -201,6 +202,8 @@ public class InformationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
     }
 

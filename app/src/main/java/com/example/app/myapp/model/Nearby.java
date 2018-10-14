@@ -17,6 +17,10 @@ public class Nearby {
         return (dist);
     }
 
+
+
+
+
     private double deg2rad(double deg) {
         return (deg * Math.PI / 180.0);
     }

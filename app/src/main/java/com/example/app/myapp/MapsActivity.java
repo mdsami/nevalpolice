@@ -4,6 +4,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
 import com.android.volley.AuthFailureError;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -56,6 +57,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
 
+
         mapFragment.getMapAsync(this);
 
 
@@ -85,11 +87,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 JSONObject thanafari = array.getJSONObject(i);
 
                                 // Get the current student (json object) data
+                                final String id = thanafari.getString("id");
                                 String oc = thanafari.getString("oc");
                                 String name = thanafari.getString("name");
                                 String phone = thanafari.getString("phone");
                                 String lat = thanafari.getString("lat");
                                 String lon = thanafari.getString("long");
+
 
                                 Log.e("lat - long", lat+"->"+lon);
                                 // Display the formatted json data in text view
@@ -111,14 +115,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                                     @Override
                                     public void onInfoWindowClick(Marker marker) {
+
                                         Intent intent = new Intent(MapsActivity.this, ComplainActivity.class);
+                                        intent.putExtra("id", id);
                                         startActivity(intent);
                                     }
                                 });
                             }
 
-                            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
-                            mMap.animateCamera(CameraUpdateFactory.zoomTo(20), 2000, null);
+                            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 10));
+                            mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 10, null);
+                            //mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+
 
                         }catch (JSONException e){
                             e.printStackTrace();
@@ -160,14 +168,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-
+        int padding = 0; // offset from edges of the map in pixels
+        //CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds, padding);
         // Add a marker in Office of DIG River Police and move the camera
-        LatLng dhaka = new LatLng(23.7942978, 90.3528592);
+        LatLng dhaka = new LatLng(23.6850, 90.3563);
         mMap.addMarker(new MarkerOptions().position(dhaka).title("ডিআইজি নদী পুলিশ অফিস"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(dhaka,4.2f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(dhaka,padding));
 
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(dhaka));
-        mMap.moveCamera(CameraUpdateFactory.zoomTo(16));
+      //mMap.moveCamera(CameraUpdateFactory.newLatLng(dhaka));
+      //  mMap.moveCamera(CameraUpdateFactory.zoomTo(16));
 
     }
+
+
 }

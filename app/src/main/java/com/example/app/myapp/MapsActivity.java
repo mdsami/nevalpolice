@@ -1,5 +1,7 @@
 package com.example.app.myapp;
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -16,6 +18,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 
@@ -38,8 +41,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private Context mContext;
-    private Activity mActivity;
 
+    String ids;
 
     LatLng location;
     private double lat1;
@@ -59,6 +62,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         mapFragment.getMapAsync(this);
+
 
 
 // Initialize a new RequestQueue instance
@@ -88,6 +92,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                                 // Get the current student (json object) data
                                 final String id = thanafari.getString("id");
+
                                 String oc = thanafari.getString("oc");
                                 String name = thanafari.getString("name");
                                 String phone = thanafari.getString("phone");
@@ -106,9 +111,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                                 mMap.addMarker(new MarkerOptions()
                                         .position(location)
-                                        .title(oc)
+                                        .title(id)
 
-                                        .snippet("Thana / Fari name: " + name)
+                                        //.snippet(oc)
+                                        .snippet(name)
                                         .icon(BitmapDescriptorFactory
                                                 .fromResource(R.drawable.pin)));
 
@@ -117,7 +123,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     public void onInfoWindowClick(Marker marker) {
 
                                         Intent intent = new Intent(MapsActivity.this, ComplainActivity.class);
-                                        intent.putExtra("id", id);
+                                        intent.putExtra("id", marker.getTitle());
                                         startActivity(intent);
                                     }
                                 });
@@ -126,6 +132,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 10));
                             mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 10, null);
                             //mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                            // map is a GoogleMap object
+//                            if (ContextCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+//                                mMap.setMyLocationEnabled(true);
+//
+//                            } else {
+//                                // Show rationale and request permission.
+//                            }
+//                            //mMap.getUiSettings().setMyLocationButtonEnabled(true);
+
 
 
                         }catch (JSONException e){
@@ -177,6 +192,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
       //mMap.moveCamera(CameraUpdateFactory.newLatLng(dhaka));
       //  mMap.moveCamera(CameraUpdateFactory.zoomTo(16));
+
+
 
     }
 

@@ -174,13 +174,7 @@ public class ComplainActivity extends AppCompatActivity  {
 
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null) {
-            String value = extras.getString("id");
-            //The key argument here must match that used in the other activity
-            //Toast.makeText(mContext, "id", Toast.LENGTH_SHORT).show();
-            Log.d("DATA_ID", value);
-        }
+
         //setup data
         idInitialClass = new IdInitialClass();
 
@@ -198,6 +192,15 @@ public class ComplainActivity extends AppCompatActivity  {
 
 
 
+        }
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String value = extras.getString("id");
+            //The key argument here must match that used in the other activity
+            //Toast.makeText(mContext, "id", Toast.LENGTH_SHORT).show();
+            idInitialClass.getSpinnerSelected(this, "sp2", spArr2, Integer.parseInt(value));
+            Log.d("DATA_ID", value);
         }
 
         // open camera for image

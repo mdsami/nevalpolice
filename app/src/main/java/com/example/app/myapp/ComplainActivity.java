@@ -116,8 +116,13 @@ public class ComplainActivity extends AppCompatActivity  {
 
     SpinnerValue[] spArr3 = new SpinnerValue[]{
             new SpinnerValue("Select Fari  ", "0"),
-            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়ি ", "1"),
-            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "2")
+            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়ি ", "53"),
+            new SpinnerValue("কুতুবপুর নৌ ফাঁড়ি", "54"),
+            new SpinnerValue("বরিসুর নৌ ফাঁড়ি", "55"),
+
+            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
+            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
+            new SpinnerValue("টঙ্গি নৌ ফাঁড়ি", "58"),
 
 
     };
@@ -200,6 +205,7 @@ public class ComplainActivity extends AppCompatActivity  {
             //The key argument here must match that used in the other activity
             //Toast.makeText(mContext, "id", Toast.LENGTH_SHORT).show();
             idInitialClass.getSpinnerSelected(this, "sp2", spArr2, Integer.parseInt(value));
+            idInitialClass.getSpinnerSelected(this, "sp3", spArr3, Integer.parseInt(value));
             Log.d("DATA_ID", value);
         }
 

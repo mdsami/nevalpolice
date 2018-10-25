@@ -30,7 +30,7 @@ import java.util.List;
 public class ThanaFariRecyclerAdapter extends RecyclerView.Adapter<ThanaFariRecyclerAdapter.ViewHolder> {
     private List<Information> informationList;
     private Context mContext;
-
+    String id;
     public ThanaFariRecyclerAdapter(List<Information> informationList) {
         this.informationList = informationList;
     }
@@ -89,7 +89,9 @@ public class ThanaFariRecyclerAdapter extends RecyclerView.Adapter<ThanaFariRecy
             @Override
             public void onClick(View v) {
                 Intent conplainIntent = new Intent(mContext,ComplainActivity.class);
+                //conplainIntent.putExtra("id", id);
                 mContext.startActivity(conplainIntent);
+
             }
         });
 

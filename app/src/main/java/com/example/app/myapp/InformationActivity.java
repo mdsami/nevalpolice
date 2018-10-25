@@ -238,6 +238,7 @@ public class InformationActivity extends AppCompatActivity {
                             for (int i = 0; i < thanaArray.length(); i++) {
                                 //getting the json object of the particular index inside the array
                                 JSONObject thanaObject = thanaArray.getJSONObject(i);
+                                final String id = thanaObject.getString("id");
 
                                 //creating a hero object and giving them the values from json object
                                 //ThanaFariList  thanaFariList = new ThanaFariList (heroObject.getString("oc"), heroObject.getString("name"), heroObject.getString("phone"));

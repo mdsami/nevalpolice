@@ -40,7 +40,7 @@ public class InformationActivity extends AppCompatActivity {
             new SpinnerValue("নারায়ণগঞ্জ সদর নৌ থানা", "59"),
             new SpinnerValue("কলাগছিয়া নৌ থানা", "60"),
             new SpinnerValue("পাটুরিয়া নৌ থানা", "87"),
-            new SpinnerValue("ডবাহাদুরবাদ নৌ থানা", "93"),
+            new SpinnerValue("বাহাদুরবাদ নৌ থানা", "93"),
             new SpinnerValue("বরিশাল সদর নৌ থানা", "103"),
             new SpinnerValue("পূর্ব ইলিশা নৌ থানা ", "104"),
             new SpinnerValue("হকেএমপি নৌ থানা খুলনা", "116"),

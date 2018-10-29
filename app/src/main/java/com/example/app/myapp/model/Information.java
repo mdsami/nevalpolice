@@ -9,11 +9,9 @@ public class Information {
     public Information() {
     }
 
-    public Information(String id) {
-        this.id = id;
-    }
 
-    public Information(String oc, String name, String phone) {
+    public Information(String id, String oc, String name, String phone) {
+        this.id = id;
         this.oc = oc;
         this.name = name;
         this.phone = phone;
@@ -34,4 +32,5 @@ public class Information {
     public String getId() {
         return id;
     }
+
 }

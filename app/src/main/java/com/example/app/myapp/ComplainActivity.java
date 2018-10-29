@@ -93,9 +93,10 @@ public class ComplainActivity extends AppCompatActivity  {
 
     SpinnerValue[] spArr1 = new SpinnerValue[]{
             new SpinnerValue("Select Type of crime  ", "0"),
-            new SpinnerValue("দুর্বৃত্তদের হামলা  ", "1"),
-            new SpinnerValue("মাঝারী ", "2"),
-            new SpinnerValue("নিন্মমানের ","3"),
+            new SpinnerValue("লঞ্চে অতিরিক্ত যাত্রী বোঝাই  ", "1"),
+            new SpinnerValue("নৌ পথে  ছিনতাই  ", "2"),
+            new SpinnerValue(" জাটকা নিধন ","3"),
+            new SpinnerValue(" অন্যান্য  ","4"),
     };
     SpinnerValue[] spArr2 = new SpinnerValue[]{
 

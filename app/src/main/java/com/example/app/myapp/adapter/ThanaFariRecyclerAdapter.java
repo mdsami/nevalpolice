@@ -30,7 +30,7 @@ import java.util.List;
 public class ThanaFariRecyclerAdapter extends RecyclerView.Adapter<ThanaFariRecyclerAdapter.ViewHolder> {
     private List<Information> informationList;
     private Context mContext;
-    String id;
+
     public ThanaFariRecyclerAdapter(List<Information> informationList) {
         this.informationList = informationList;
     }
@@ -43,11 +43,11 @@ public class ThanaFariRecyclerAdapter extends RecyclerView.Adapter<ThanaFariRecy
     }
 
     @Override
-    public void onBindViewHolder(ThanaFariRecyclerAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(final ThanaFariRecyclerAdapter.ViewHolder viewHolder,final int i) {
         final String id = informationList.get(i).getId();
-        String oc = informationList.get(i).getOc();
-       final String phone = informationList.get(i).getPhone();
-        String thana = informationList.get(i).getName();
+        final String oc = informationList.get(i).getOc();
+        final String phone = informationList.get(i).getPhone();
+        final String thana = informationList.get(i).getName();
 
         viewHolder.setThanaFariInfo(oc,phone,thana);
 
@@ -89,9 +89,10 @@ public class ThanaFariRecyclerAdapter extends RecyclerView.Adapter<ThanaFariRecy
             @Override
             public void onClick(View v) {
                 Intent conplainIntent = new Intent(mContext,ComplainActivity.class);
-                //conplainIntent.putExtra("id", id);
+                conplainIntent.putExtra("id", id);
                 mContext.startActivity(conplainIntent);
-
+//                Toast.makeText(mContext, "ID: " +id, Toast.LENGTH_SHORT).show();
+//                Log.d("AllInfo","ID : " + id + "\nOC: " + oc +"\nPHONE : " + phone + "\nTHANA : " + thana);
             }
         });
 
@@ -104,10 +105,10 @@ public class ThanaFariRecyclerAdapter extends RecyclerView.Adapter<ThanaFariRecy
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         View view;
-        BNTextView tvOc;
-        BNTextView tvPost;
-        BNTextView tvPhn;
-        BNTextView tvThana;
+        TextView tvOc;
+        TextView tvPost;
+        TextView tvPhn;
+        TextView tvThana;
 
         Button btnComplain;
 
@@ -127,15 +128,6 @@ public class ThanaFariRecyclerAdapter extends RecyclerView.Adapter<ThanaFariRecy
             tvPhn = view.findViewById(R.id.tvPhn);
             tvPost = view.findViewById(R.id.tvPost);
             tvThana = view.findViewById(R.id.tvThana);
-
-
-            tvOc = new BNTextView(mContext);
-            tvPost = new BNTextView(mContext);
-            tvPhn = new BNTextView(mContext);
-            tvPhn.setProcessType(ProcessType.NUMBER);
-            tvThana = new BNTextView(mContext);
-
-
 
             tvOc.setText(oc);
             tvPhn.setText(phone);

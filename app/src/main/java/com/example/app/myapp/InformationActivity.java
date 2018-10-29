@@ -1,27 +1,21 @@
 package com.example.app.myapp;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.app.myapp.adapter.ThanaFariListAdapter;
 import com.example.app.myapp.adapter.ThanaFariRecyclerAdapter;
 import com.example.app.myapp.model.Information;
 import com.example.app.myapp.module.SpinnerValue;
@@ -65,88 +59,6 @@ public class InformationActivity extends AppCompatActivity {
             new SpinnerValue("হাসনাবাদ নৌ ফাঁড়ি ", "1"),
             new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "2")
 
-            //            new SpinnerValue("সদরঘাট নৌ থানা ", "58"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "59"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "60"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "61"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "62"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "63"),
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "64"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "55"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "66"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "66"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "67"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "68"),
-//
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "69"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "70"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "71"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "72"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "73"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "74"),
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "75"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "76"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "77"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "78"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "79"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "80"),
-//
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-//
-//
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-//
-//
-//
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-//
-//
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-//            new SpinnerValue("সদরঘাট নৌ থানা ", "52"),
-//            new SpinnerValue("হাসনাবাদ নৌ ফাঁড়", "53"),
-//            new SpinnerValue("কুতুবপুর নৌ ফাঁড়", "54"),
-//            new SpinnerValue("বরিসুর নৌ ফাঁড়", "55"),
-//            new SpinnerValue("ডেমরা নৌ ফাঁড়ি", "56"),
-//            new SpinnerValue("বসিলা নৌ ফাঁড়ি", "57"),
-
     };
 
 
@@ -155,22 +67,20 @@ public class InformationActivity extends AppCompatActivity {
     private ThanaFariRecyclerAdapter thanaFariRecyclerAdapter;
     private RecyclerView recyclerViewInfo;
     IdInitialClass idInitialClass;
+    private RequestQueue requestQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
-       // onBackPressed();
+        // onBackPressed();
 
 
 
         informationList = new ArrayList<>();
-        thanaFariRecyclerAdapter = new ThanaFariRecyclerAdapter(informationList);
         recyclerViewInfo = findViewById(R.id.recyclerViewInfo);
-        recyclerViewInfo.setLayoutManager(new LinearLayoutManager(this));
-        recyclerViewInfo.setAdapter(thanaFariRecyclerAdapter);
-        this.recyclerViewInfo.requestFocus();
-
+        this.recyclerViewInfo.setNestedScrollingEnabled(false);
+        requestQueue = Volley.newRequestQueue(InformationActivity.this);
 
         loadthanafariList();
 
@@ -204,75 +114,44 @@ public class InformationActivity extends AppCompatActivity {
         });
 
 
-
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        finish();
-//    }
-
     private void loadthanafariList() {
-        //getting the progressbar
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, JSON_URL, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray jsonArray = response.getJSONArray("thanafari");
+                    for(int i=0;i<jsonArray.length();i++){
+                        JSONObject thanaList = jsonArray.getJSONObject(i);
+                        String oc = thanaList.getString("oc");
+                        String name = thanaList.getString("name");
+                        String phone = thanaList.getString("phone");
+                        String id = thanaList.getString("id");
 
-        //making the progressbar visible
+                        informationList.add(new Information(id,oc,name,phone));
 
-
-        //creating a string request to send request to the url
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, JSON_URL,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        //hiding the progressbar after completion
-
-
-                        try {
-                            //getting the whole json object from the response
-                            JSONObject obj = new JSONObject(response);
-
-                            //we have the array named hero inside the object
-                            //so here we are getting that json array
-                            JSONArray thanaArray = obj.getJSONArray("thanafari");
-
-                            //now looping through all the elements of the json array
-                            for (int i = 0; i < thanaArray.length(); i++) {
-                                //getting the json object of the particular index inside the array
-                                JSONObject thanaObject = thanaArray.getJSONObject(i);
-                                final String id = thanaObject.getString("id");
-
-                                //creating a hero object and giving them the values from json object
-                                //ThanaFariList  thanaFariList = new ThanaFariList (heroObject.getString("oc"), heroObject.getString("name"), heroObject.getString("phone"));
-                                Information information = new Information(thanaObject.getString("oc"),thanaObject.getString("name"),thanaObject.getString("phone"));
-
-                                //adding the hero to herolist
-                                informationList.add(information);
-                                thanaFariRecyclerAdapter.notifyDataSetChanged();
-                            }
-
-                            //creating custom adapter object
-
-                            //adding the adapter to listview
-
-
-                            //listView.setTypeface(fontStyleBangla);
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
                     }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        //displaying the error in toast if occurrs
-                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    thanaFariRecyclerAdapter = new ThanaFariRecyclerAdapter(informationList);
+                    recyclerViewInfo.setLayoutManager(new LinearLayoutManager(InformationActivity.this));
+                    recyclerViewInfo.setAdapter(thanaFariRecyclerAdapter);
+                    thanaFariRecyclerAdapter.notifyDataSetChanged();
 
-        //creating a request queue
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
+                }catch (JSONException e){
+                    Toast.makeText(InformationActivity.this, ""+ e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.d("ERRRROR",e.getMessage());
 
-        //adding the string request to request queue
-        requestQueue.add(stringRequest);
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(InformationActivity.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.d("ERRRROR",error.getMessage());
+
+            }
+        });
+        requestQueue.add(request);
     }
 }

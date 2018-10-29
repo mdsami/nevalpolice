@@ -28,10 +28,10 @@
             android:id="@+id/backarrow"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginStart="16dp"
             android:layout_marginBottom="8dp"
-            android:onClick="backButton"
+            android:layout_marginStart="16dp"
             android:background="@drawable/arrow_back"
+            android:onClick="backButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/arrow_back" />
@@ -40,10 +40,10 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:fontFamily="@font/nunito_semibold"
             android:text="INFORMATION"
             android:textColor="@android:color/background_light"
@@ -66,425 +66,196 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintVertical_bias="1.0">
 
-        <android.support.constraint.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerViewInfo"
-                android:layout_width="0dp"
-                android:layout_height="279dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardView2"
-                android:layout_width="0dp"
-                android:layout_height="220dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/page_banner">
 
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/page_banner">
-
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="150dp"
-                        android:layout_height="1dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:background="#FFFFFF"
-                        android:textSize="1sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView8"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.714" />
-
-                    <LinearLayout
-                        android:id="@+id/linearLayouts"
-                        android:layout_width="0dp"
-                        android:layout_height="42dp"
-                        android:layout_marginEnd="15dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="24dp"
-                        android:background="@drawable/edit_text_bg"
-                        android:orientation="horizontal"
-                        android:weightSum="2"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <!--<LinearLayout-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_weight="1">-->
-
-                            <!--<android.support.constraint.ConstraintLayout-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="match_parent">-->
-
-                                <!--<EditText-->
-                                    <!--android:id="@+id/editText"-->
-                                    <!--android:layout_width="161dp"-->
-                                    <!--android:layout_height="37dp"-->
-                                    <!--android:background="@drawable/edit_text_bg"-->
-                                    <!--android:ems="10"-->
-                                    <!--android:hint="Select Thana"-->
-                                    <!--android:inputType="textPersonName"-->
-                                    <!--android:paddingLeft="2dp"-->
-                                    <!--android:textSize="16sp"-->
-                                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                                    <!--app:layout_constraintEnd_toEndOf="parent"-->
-                                    <!--app:layout_constraintStart_toStartOf="parent"-->
-                                    <!--app:layout_constraintTop_toTopOf="parent" />-->
-                            <!--</android.support.constraint.ConstraintLayout>-->
-                        <!--</LinearLayout>-->
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="150dp"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#FFFFFF"
+                            android:textSize="1sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textView8"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.714" />
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:id="@+id/linearLayouts"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="24dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                            <android.support.constraint.ConstraintLayout
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
 
-                                <Spinner
-                                    android:id="@+id/sp1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </android.support.constraint.ConstraintLayout>
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <Spinner
+                                        android:id="@+id/sp1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </android.support.constraint.ConstraintLayout>
+                            </LinearLayout>
+
                         </LinearLayout>
 
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:id="@+id/linearLayouts2"
-                        android:layout_width="0dp"
-                        android:layout_height="42dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="88dp"
-                        android:background="@drawable/edit_text_bg"
-                        android:orientation="horizontal"
-                        android:weightSum="2"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <!--<LinearLayout-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="match_parent"-->
-                            <!--android:layout_weight="1">-->
-
-                            <!--<android.support.constraint.ConstraintLayout-->
-                                <!--android:layout_width="match_parent"-->
-                                <!--android:layout_height="match_parent">-->
-
-                                <!--<EditText-->
-                                    <!--android:id="@+id/editText4"-->
-                                    <!--android:layout_width="161dp"-->
-                                    <!--android:layout_height="37dp"-->
-                                    <!--android:background="@drawable/edit_text_bg"-->
-                                    <!--android:ems="10"-->
-                                    <!--android:hint="Select Fari"-->
-                                    <!--android:inputType="textPersonName"-->
-                                    <!--android:paddingLeft="2dp"-->
-                                    <!--android:textSize="16sp"-->
-                                    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                                    <!--app:layout_constraintEnd_toEndOf="parent"-->
-                                    <!--app:layout_constraintStart_toStartOf="parent"-->
-                                    <!--app:layout_constraintTop_toTopOf="parent" />-->
-                            <!--</android.support.constraint.ConstraintLayout>-->
-                        <!--</LinearLayout>-->
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                            android:id="@+id/linearLayouts2"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="88dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                            <android.support.constraint.ConstraintLayout
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
 
-                                <Spinner
-                                    android:id="@+id/sp2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="0dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-                            </android.support.constraint.ConstraintLayout>
+                                <android.support.constraint.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <Spinner
+                                        android:id="@+id/sp2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </android.support.constraint.ConstraintLayout>
+                            </LinearLayout>
+
                         </LinearLayout>
 
-                    </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="OR"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.734" />
+
+                        <Button
+                            android:id="@+id/button3"
+                            android:layout_width="0dp"
+                            android:layout_height="32dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/edit_text_bg"
+                            android:text="USE CURRENT LOCATION"
+                            android:textColor="#1775BF"
+                            android:textSize="13sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView8"
+                            app:layout_constraintVertical_bias="1.0" />
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="150dp"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#FFFFFF"
+                            android:textSize="1sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/textView8"
+                            app:layout_constraintHorizontal_bias="0.421"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.714" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
 
 
-                    <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:text="OR"
-                        android:textColor="@android:color/background_light"
-                        android:textSize="12sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.734" />
-
-                    <Button
-                        android:id="@+id/button3"
-                        android:layout_width="0dp"
-                        android:layout_height="32dp"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginStart="16dp"
-                        android:background="@drawable/edit_text_bg"
-                        android:text="USE CURRENT LOCATION"
-                        android:textColor="#1775BF"
-                        android:textSize="13sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView8"
-                        app:layout_constraintVertical_bias="1.0" />
-
-                    <TextView
-                        android:id="@+id/tv2"
-                        android:layout_width="150dp"
-                        android:layout_height="1dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:background="#FFFFFF"
-                        android:textSize="1sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/textView8"
-                        app:layout_constraintHorizontal_bias="0.421"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.714" />
-                </android.support.constraint.ConstraintLayout>
-            </android.support.v7.widget.CardView>
-
-
-
-            <!--<android.support.v7.widget.CardView-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="170dp"-->
-                <!--android:layout_marginBottom="24dp"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginTop="8dp"-->
-                <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--app:layout_constraintEnd_toEndOf="parent"-->
-                <!--app:layout_constraintHorizontal_bias="0.0"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/cardView3">-->
-
-
-                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:layout_margin="8dp"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:background="@drawable/textview_border"&ndash;&gt;-->
-                    <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
-
-
-                    <!--&lt;!&ndash;<android.support.constraint.ConstraintLayout&ndash;&gt;-->
-                        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                        <!--&lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;-->
-
-                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:id="@+id/textView12"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginStart="5dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginTop="16dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:text="জনাব, শেখ মোঃ আব্দুর রাজ্জাক "&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:textColor="@color/colorTextPrimaryDark"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.028"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
-
-                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:id="@+id/textView13"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:text="Office-in-Charge"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.008"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/textView12" />&ndash;&gt;-->
-
-                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:id="@+id/textView14"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:text="01769692522"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:textSize="13sp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.007"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/textView13" />&ndash;&gt;-->
-
-                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:id="@+id/textView15"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:text="সদরঘাট নৌ থানা "&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:textColor="@color/colorTextPrimaryDark"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.007"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/textView14" />&ndash;&gt;-->
-
-                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:id="@+id/textView16"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_height="1dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginTop="16dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:background="#DDD"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/textView15" />&ndash;&gt;-->
-
-                        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:id="@+id/textView188"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:text="Complain"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:textColor="@android:color/holo_orange_dark"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.971"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintTop_toBottomOf="@+id/textView16"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintVertical_bias="0.0" />&ndash;&gt;-->
-
-                        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_width="39dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_height="39dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginBottom="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:background="@drawable/border_round"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.72"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintVertical_bias="0.323">&ndash;&gt;-->
-
-                            <!--&lt;!&ndash;<android.support.constraint.ConstraintLayout&ndash;&gt;-->
-                                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                                <!--&lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;-->
-
-                                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:id="@+id/imageView14"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_height="0dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_marginEnd="4dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_marginStart="4dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:srcCompat="@drawable/call" />&ndash;&gt;-->
-                            <!--&lt;!&ndash;</android.support.constraint.ConstraintLayout>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
-
-                        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_width="39dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_height="39dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginBottom="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginEnd="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginStart="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:layout_marginTop="8dp"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:background="@drawable/border_round"&ndash;&gt;-->
-                            <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintHorizontal_bias="0.885"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-                            <!--&lt;!&ndash;app:layout_constraintVertical_bias="0.323">&ndash;&gt;-->
-
-                            <!--&lt;!&ndash;<android.support.constraint.ConstraintLayout&ndash;&gt;-->
-                                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-                                <!--&lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;-->
-
-                                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:id="@+id/imageView12"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_height="0dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_marginBottom="10dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_marginEnd="4dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_marginStart="4dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;android:layout_marginTop="10dp"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;app:srcCompat="@drawable/msg" />&ndash;&gt;-->
-                            <!--&lt;!&ndash;</android.support.constraint.ConstraintLayout>&ndash;&gt;-->
-                        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
-
-
-                    <!--&lt;!&ndash;</android.support.constraint.ConstraintLayout>&ndash;&gt;-->
-                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
-            <!--</android.support.v7.widget.CardView>-->
-
-        </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
 
 
     </ScrollView>

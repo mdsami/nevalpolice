@@ -167,6 +167,16 @@ public class ComplainActivity extends AppCompatActivity  {
         etmgs = (EditText) findViewById(R.id.etmgs);
         etphone = (EditText) findViewById(R.id.etphone);
 
+        etphone.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+
+                if (etphone.getText().length()<11){
+                    etphone.setError("Plase input your phone number in 11 digit");
+                }
+            }
+        });
+
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
 
